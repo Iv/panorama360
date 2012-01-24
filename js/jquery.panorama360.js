@@ -47,6 +47,7 @@
 				if (Math.abs(scrollDelta)<=2) scrollDelta = 0;
 				scrollView(panoramaContainer, elem_width, scrollDelta, settings);
 			}, 1);
+			viewport.unbind('mousedown mouseup mousemove mouseout mousewheel contextmenu touchmove touchend');
 			viewport.mousedown(function(e){
 				if (isDragged) return false;
 				$(this).addClass("grab");
